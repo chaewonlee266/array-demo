@@ -7,7 +7,7 @@
   </head>
   <body>
     <div>Todesfuge by Paul Celan</div>
-    <button>next verse</button>
+    <button id="button">next verse</button>
     <div id="verse-display"></div>
     <script>
       const verse = [
@@ -21,6 +21,16 @@
         "he whistles his Jews dig a grave in the ground",
         "he commands us strike up for the dance",
       ];
+      let currentVerse = 0;
+
+      const button=document. querySelector("#button");
+      const versedisplay=document.querySelector("#verse-display");
+
+      button. addEventListener("click", function(){
+        versedisplay.textContent=verse[currentVerse];
+        currentVerse=currentVerse+1
+      })
+      
     </script>
   </body>
 </html>
